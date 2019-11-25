@@ -1,6 +1,6 @@
 {
   "name": "rename-custom-elements-webpack-plugin",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "This webpack plugin will rename all custom elements in a project, adding a suffix, a prefix, or both.",
   "main": "./lib/index.js",
   "repository": {

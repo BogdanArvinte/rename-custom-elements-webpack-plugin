@@ -32,7 +32,7 @@ customElements.define('my-custom-element', MyCustomElement);
 If we run webpack with the `RenameCustomElementsWebpackPlugin` using the following options:
 
 ```js
-const RenameCustomElementsWebpackPlugin = require('rename-custom-elements-webpack-plugin);
+const RenameCustomElementsWebpackPlugin = require('rename-custom-elements-webpack-plugin');
 
 ...
 plugins: [
