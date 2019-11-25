@@ -1,11 +1,11 @@
 {
-  "name": "custom-element-rename-webpack-plugin",
+  "name": "rename-custom-elements-webpack-plugin",
   "version": "0.0.0",
   "description": "This webpack plugin will rename all custom elements in a project, adding a suffix, a prefix, or both.",
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marvin89/custom-element-rename-webpack-plugin"
+    "url": "https://github.com/marvin89/rename-custom-elements-webpack-plugin"
   },
   "keywords": [
     "custom",
@@ -25,8 +25,8 @@
     "node": "*"
   },
   "bugs": {
-    "url": "https://github.com/marvin89/custom-element-rename-webpack-plugin/issues"
+    "url": "https://github.com/marvin89/rename-custom-elements-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/marvin89/custom-element-rename-webpack-plugin",
+  "homepage": "https://github.com/marvin89/rename-custom-elements-webpack-plugin",
   "scripts": {}
 }
