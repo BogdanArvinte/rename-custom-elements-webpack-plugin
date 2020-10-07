@@ -16,6 +16,7 @@ The plugin was tested in a Lit-Element project.
 | `prefix` | `String` | `''` | Adds this prefix to all custom elements in the project |
 | `sufix` | `String` | `Date.now().toString(36)` | Adds this sufix to all custom elements in project |
 | `index` | `String` | `index.html` | Specifies an index.html that is also parsed for custom elements |
+| `tagFilter` | `RegExp` | `/^my-app(-[-a-z]+|$)/` | Filter the tags to be renamed |
 
 ## Example
 
@@ -38,7 +39,8 @@ const RenameCustomElementsWebpackPlugin = require('rename-custom-elements-webpac
 plugins: [
     new RenameCustomElementsWebpackPlugin({
         prefix: 'org',
-        sufix: '000'
+        sufix: '000',
+        tagFilter: /^my-custom(-[-a-z]+|$)/,
     })
 ],
 ...
