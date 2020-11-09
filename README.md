@@ -1,4 +1,5 @@
 # Rename Custom Elements Webpack Plugin
+
 This webpack plugin will rename all custom elements in a project, adding a suffix, a prefix, or both.
 
 > Note: This plugin will only work on custom elements with a string literal definition (e.g. `customElements.define('my-element, MyElement)`)
@@ -11,12 +12,12 @@ The plugin was tested in a Lit-Element project.
 
 ## Options
 
-| Option name | Value type | Default value | Description |
-|-------------|------------|---------------|-------------|
-| `prefix` | `String` | `''` | Adds this prefix to all custom elements in the project |
-| `sufix` | `String` | `Date.now().toString(36)` | Adds this sufix to all custom elements in project |
-| `index` | `String` | `index.html` | Specifies an index.html that is also parsed for custom elements |
-| `tagFilter` | `RegExp` | `/^my-app(-[-a-z]+|$)/` | Filter the tags to be renamed |
+| Option name | Value type | Default value             | Description                                                     |
+| ----------- | ---------- | ------------------------- | --------------------------------------------------------------- |
+| `prefix`    | `String`   | `''`                      | Adds this prefix to all custom elements in the project          |
+| `suffix`    | `String`   | `Date.now().toString(36)` | Adds this suffix to all custom elements in project              |
+| `index`     | `String`   | `index.html`              | Specifies an index.html that is also parsed for custom elements |
+| `tagFilter` | `RegExp`   | `/^my-app(-[-a-z]+$)/`    | Filter the tags to be renamed                                   |
 
 ## Example
 
@@ -39,7 +40,7 @@ const RenameCustomElementsWebpackPlugin = require('rename-custom-elements-webpac
 plugins: [
     new RenameCustomElementsWebpackPlugin({
         prefix: 'org',
-        sufix: '000',
+        suffix: '000',
         tagFilter: /^my-custom(-[-a-z]+|$)/,
     })
 ],
@@ -50,9 +51,7 @@ Then the output will looks like this
 
 ```html
 <body>
-    <org-my-custom-element-000>
-        ...some other content
-    </org-my-custom-element-000>
-    ...
+  <org-my-custom-element-000> ...some other content </org-my-custom-element-000>
+  ...
 </body>
 ```
